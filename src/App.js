@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import react from "react";
+import React from "react";
+import Header from './componentes/Header/header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //METO LAS ETIQUETAS HERMANAS EN UNA MISMA ETIQUETA PADRE (REACT FRAGMENT aunque puede ser DIV tambien)
+    
+    <React.Fragment> 
+      <Header/> 
+       {/* EMPEZAMOS A CREAR COMPONENTES NOSOTROS */}
+      <h1> y somos el grupo 4 </h1>
+    </React.Fragment>
+    
   );
 }
 
