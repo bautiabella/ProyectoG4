@@ -1,5 +1,4 @@
 .container{
     column-count: 4;
-    
-   
+    word-wrap: break-word;
 }

@@ -37,7 +37,8 @@ console.log(this.state.movies);
            return  <Card key = {index}
            imagen = {element.backdrop_path}
                 title = {element.title}
-                descripcion = {element.overview}></Card>
+                descripcion = {element.overview}
+                ></Card>
 
           
         })}
