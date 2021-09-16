@@ -24,26 +24,37 @@ export default class Container extends Component{
   
 }   
 
-   
-    
+borrarMovie(id){
+    let peliculasFiltradas = this.state.movies.filter(movies => movies.id !== id);
+    this.setState({
+        movies: peliculasFiltradas
+    });
+}
 
     render (){
 console.log(this.state.movies);
     return (
         <div className="container">
          
-           
-		{this.state.movies.map( (element, index) => {
-           return <Card 
-                    key = {index}
-                    imagen = {element.backdrop_path}
-                    title = {element.title}
-                    dialanzamiento = {element.release_date}
-                    info = {element.overview}
-                ></Card>
+        {this.state.movies === [] ? 
 
-          
-        })}
+            <h4>Cargando...</h4> :
+        
+            this.state.movies.map( (element, index) => {
+                return <Card 
+                        key = {index}
+                        imagen = {element.backdrop_path}
+                        title = {element.title}
+                        dialanzamiento = {element.release_date}
+                        info = {element.overview}
+                        id = {element.id}
+                        borrarMovie = {(id) => this.borrarMovie(id)}
+
+                    ></Card>
+                })
+            }
+
+		
     </div>
     )
 }

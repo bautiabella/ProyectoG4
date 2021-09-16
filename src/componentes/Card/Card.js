@@ -8,12 +8,8 @@ export default class Card extends Component{
             clase: 'hide',
             mnsj: "Ver más"
         }
-        }
+    }
 
-
-borrar() {
-    console.log('Borrar');
-}
 
 verMas() {
     if(this.state.clase === 'hide'){
@@ -36,13 +32,13 @@ render (){
 <div className = "card1">
        
             
-        <img src= { `https://image.tmdb.org/t/p/w500${this.props.imagen} `}/>
+        <img src= { `https://image.tmdb.org/t/p/w500${this.props.imagen} `} alt=""/>
 
             <h2>{this.props.title}</h2>
             <h5>Fecha de lanzamiento: {this.props.dialanzamiento}</h5>
             <p className={this.state.clase}>{this.props.info}</p>
             <button className= "boton" onClick={() => this.verMas()}>{this.state.mnsj}</button>
-            <button className= "boton" onClick={() => this.borrar()}>Borrar</button>
+            <button className= "boton" onClick={() => this.props.borrarMovie(this.props.id)}>Borrar</button>
             
 </div>
         
