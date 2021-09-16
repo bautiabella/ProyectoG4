@@ -1,7 +1,9 @@
 
 .card1{
+    position: relative;
+    top: 30px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 19%;
     background: rgb(120, 147, 184);
     border-radius: 5px;
