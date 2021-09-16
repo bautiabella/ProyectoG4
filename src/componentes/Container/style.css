@@ -1,4 +1,6 @@
 .container{
-    column-count: 4;
-    word-wrap: break-word;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

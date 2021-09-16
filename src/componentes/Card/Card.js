@@ -7,6 +7,15 @@ export default class Card extends Component{
         
         }
 
+
+borrar() {
+    console.log('Borrar');
+}
+
+verMas() {
+    console.log('Ves más');
+}
+
 render (){
     return(
 
@@ -15,12 +24,10 @@ render (){
             
         <img src= { `https://image.tmdb.org/t/p/w500${this.props.imagen} `}/>
 
-            <button>←</button>
-            <button>→</button>
             <h2>{this.props.title}</h2>
             <h5>{this.props.dialanzamiento}</h5>
-            <button>Ver mas</button>
-            <button>Borrar</button>
+            <button onClick={this.verMas}>Ver mas</button>
+            <button onClick={this.borrar}>Borrar</button>
             
 </div>
         
