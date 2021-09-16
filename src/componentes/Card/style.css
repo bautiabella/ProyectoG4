@@ -7,11 +7,14 @@
     width: 19%;
     background: rgb(120, 147, 184);
     border-radius: 5px;
-    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
 }
 .card1 img{
     width: 100%;
     margin-bottom: 20px; 
+}
+
+.card1:hover{
+    box-shadow: 0 .15rem 1.75rem 0 rgba(40, 37, 226, 0.856);
 }
 
 h2{
