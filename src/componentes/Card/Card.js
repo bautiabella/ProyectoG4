@@ -6,7 +6,7 @@ export default class Card extends Component{
         super (props);
         this.state={
             clase: 'hide',
-            mnsj: 'Ver más'
+            mnsj: "Ver más"
         }
         }
 
@@ -19,12 +19,12 @@ verMas() {
     if(this.state.clase === 'hide'){
         this.setState({
             clase: 'show',
-            mnsj: 'Ver menos'
+            mnsj: "Ver menos"
         })
     }else {
         this.setState({
             clase: 'hide',
-            mnsj: 'Ver más'
+            mnsj: "Ver más"
         })
     }
     
