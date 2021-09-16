@@ -5,7 +5,8 @@ export default class Card extends Component{
     constructor (props){
         super (props);
         this.state={
-            clase: 'hide'
+            clase: 'hide',
+            mnsj: 'Ver más'
         }
         }
 
@@ -17,11 +18,13 @@ borrar() {
 verMas() {
     if(this.state.clase === 'hide'){
         this.setState({
-            clase: 'show'
+            clase: 'show',
+            mnsj: 'Ver menos'
         })
     }else {
         this.setState({
-            clase: 'hide'
+            clase: 'hide',
+            mnsj: 'Ver más'
         })
     }
     
@@ -38,7 +41,7 @@ render (){
             <h2>{this.props.title}</h2>
             <h5>Fecha de lanzamiento: {this.props.dialanzamiento}</h5>
             <p className={this.state.clase}>{this.props.info}</p>
-            <button className= "boton" onClick={() => this.verMas()}>Ver mas</button>
+            <button className= "boton" onClick={() => this.verMas()}>{this.state.mnsj}</button>
             <button className= "boton" onClick={() => this.borrar()}>Borrar</button>
             
 </div>
