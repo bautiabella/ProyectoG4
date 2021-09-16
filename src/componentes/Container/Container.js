@@ -47,6 +47,7 @@ console.log(this.state.movies);
                         title = {element.title}
                         dialanzamiento = {element.release_date}
                         info = {element.overview}
+                        rating = {element.vote_average}
                         id = {element.id}
                         borrarMovie = {(id) => this.borrarMovie(id)}
 
