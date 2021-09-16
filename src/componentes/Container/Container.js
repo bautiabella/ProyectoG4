@@ -33,11 +33,13 @@ console.log(this.state.movies);
         <div className="container">
          
            
-		{this.state.movies.map( (element,index) => {
-           return  <Card key = {index}
-                imagen = {element.backdrop_path}
-                title = {element.title}
-                dialanzamiento = {element.release_date}
+		{this.state.movies.map( (element, index) => {
+           return <Card 
+                    key = {index}
+                    imagen = {element.backdrop_path}
+                    title = {element.title}
+                    dialanzamiento = {element.release_date}
+                    info = {element.overview}
                 ></Card>
 
           

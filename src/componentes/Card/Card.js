@@ -4,7 +4,9 @@ import '../Card/style.css'
 export default class Card extends Component{
     constructor (props){
         super (props);
-        
+        this.state={
+            clase: 'hide'
+        }
         }
 
 
@@ -13,7 +15,16 @@ borrar() {
 }
 
 verMas() {
-    console.log('Ves más');
+    if(this.state.clase === 'hide'){
+        this.setState({
+            clase: 'show'
+        })
+    }else {
+        this.setState({
+            clase: 'hide'
+        })
+    }
+    
 }
 
 render (){
@@ -25,9 +36,10 @@ render (){
         <img src= { `https://image.tmdb.org/t/p/w500${this.props.imagen} `}/>
 
             <h2>{this.props.title}</h2>
-            <h5>{this.props.dialanzamiento}</h5>
-            <button onClick={this.verMas}>Ver mas</button>
-            <button onClick={this.borrar}>Borrar</button>
+            <h5>Fecha de lanzamiento: {this.props.dialanzamiento}</h5>
+            <p className={this.state.clase}>{this.props.info}</p>
+            <button className= "boton" onClick={() => this.verMas()}>Ver mas</button>
+            <button className= "boton" onClick={() => this.borrar()}>Borrar</button>
             
 </div>
         
