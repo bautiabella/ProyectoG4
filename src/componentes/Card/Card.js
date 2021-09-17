@@ -37,8 +37,8 @@ render (){
             <h2>{this.props.title}</h2>
             <h5>Fecha de lanzamiento: {this.props.dialanzamiento}</h5>
             <p className={this.state.clase}>{this.props.info}<br></br><br></br>Rating: {this.props.rating}</p>
-            <button className= "boton" onClick={() => this.verMas()}>{this.state.mnsj}</button>
-            <button className= "boton" onClick={() => this.props.borrarMovie(this.props.id)}>Borrar</button>
+            <button className= "boton1" onClick={() => this.verMas()}>{this.state.mnsj}</button>
+            <button className= "boton1" onClick={() => this.props.borrarMovie(this.props.id)}>Borrar</button>
             
 </div>
         

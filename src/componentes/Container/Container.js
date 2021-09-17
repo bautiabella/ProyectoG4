@@ -23,6 +23,10 @@ export default class Container extends Component{
 })
   
 }   
+busquador(){
+
+}
+
 
 borrarMovie(id){
     let peliculasFiltradas = this.state.movies.filter(movies => movies.id !== id);
@@ -35,6 +39,8 @@ borrarMovie(id){
 console.log(this.state.movies);
     return (
         <div className="container">
+
+            <button className= "boton2" onClick= {() => this.busquador()}>Agregar más películas</button>
          
         {this.state.movies === [] ? 
 

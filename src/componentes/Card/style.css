@@ -14,7 +14,7 @@
 }
 
 .card1:hover{
-    box-shadow: 0 .15rem 1.75rem 0 rgba(40, 37, 226, 0.856);
+    box-shadow: 0 .15rem 1.75rem 0 rgba(66, 63, 223, 0.856);
 }
 
 h2{
@@ -30,8 +30,8 @@ h5{
 .show{
     display: block;
 }
-.boton{
-    background-color: #243e94; /* Green */
+.boton1{
+    background-color: #243e94; 
     border: none;
     margin: 10px;
     color: white;
