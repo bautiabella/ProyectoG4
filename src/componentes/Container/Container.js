@@ -7,11 +7,12 @@ export default class Container extends Component{
     constructor (props){
         super (props);
         this.state = {
-            movies:[]
+            movies:[],
+            page: 2,
         }
     }
     componentDidMount (){
-    fetch ('http://api.themoviedb.org/3/movie/popular?api_key=430be1133e3aa13291c6a21815206c6a')
+    fetch (`http://api.themoviedb.org/3/movie/popular?api_key=430be1133e3aa13291c6a21815206c6a`)
     .then (response => {return response.json () })
     .then (data =>{
 
@@ -23,8 +24,18 @@ export default class Container extends Component{
 })
   
 }   
-busquador(){
-
+agregarCards(){
+    fetch(`http://api.themoviedb.org/3/movie/popular?api_key=430be1133e3aa13291c6a21815206c6a&page=${this.state.page}`)
+    .then(response => {return response.json()})
+    .then(data => {
+        let arrayPrevio = this.state.movies;
+        let arrayActualizado = arrayPrevio.concat(data.results);
+        let pageActualizado = this.state.page + 1;
+        this.setState({
+            movies: arrayActualizado,
+            page: pageActualizado,
+        })
+    })
 }
 
 
@@ -40,7 +51,7 @@ console.log(this.state.movies);
     return (
         <div className="container">
 
-            <button className= "boton2" onClick= {() => this.busquador()}>Agregar más películas</button>
+            <button className= "boton2" onClick= {() => this.agregarCards()}>Agregar más películas</button>
          
         {this.state.movies === [] ? 
 
