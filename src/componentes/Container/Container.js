@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import Card from "../Card/Card"
+import FilterField from "../FilterField/FilterField"
 import "../Container/style.css"
 
 export default class Container extends Component{
@@ -9,6 +10,7 @@ export default class Container extends Component{
         this.state = {
             movies:[],
             page: 2,
+            moviesIniciales: [] 
         }
     }
     componentDidMount (){
@@ -18,7 +20,8 @@ export default class Container extends Component{
 
      //console.log(data.results);
     this.setState({
-        movies: data.results
+        movies: data.results, 
+        moviesIniciales: data.results
     })
     
 })
@@ -46,11 +49,17 @@ borrarMovie(id){
     });
 }
 
+filtrarPorTitulo (input){ 
+    let peliculasFiltradas= this.state.moviesIniciales.filter(pelicula => pelicula.title.toLowerCase().includes(input.toLowerCase()))
+    this.setState({
+        movies: peliculasFiltradas
+    })
+} 
     render (){
 console.log(this.state.movies);
     return (
         <div className="container">
-
+            <FilterField filtrarPorTitulo={(input)=> { this.filtrarPorTitulo(input)}} /> 
             <button className= "boton2" onClick= {() => this.agregarCards()}>Agregar más películas</button>
          
         {this.state.movies === [] ? 
