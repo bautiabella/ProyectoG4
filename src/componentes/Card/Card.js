@@ -29,7 +29,7 @@ verMas() {
 render (){
     return(
 
-<div className = "card1">
+<div className = {`card1-${this.props.orientation}`}>
        
             
         <img src= { `https://image.tmdb.org/t/p/w500${this.props.imagen} `} alt=""/>

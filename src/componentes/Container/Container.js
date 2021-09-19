@@ -10,7 +10,8 @@ export default class Container extends Component{
         this.state = {
             movies:[],
             page: 2,
-            moviesIniciales: [] 
+            moviesIniciales: [] ,
+            orientation:"row"
         }
     }
     componentDidMount (){
@@ -55,12 +56,25 @@ filtrarPorTitulo (input){
         movies: peliculasFiltradas
     })
 } 
+changeOrientation(){
+if (this.state.orientation === "row"){
+    this.setState({
+    orientation:"column"
+})
+
+}else {
+    this.setState({
+        orientation:"row"
+    })
+}
+}
     render (){
 console.log(this.state.movies);
     return (
-        <div className="container">
+        <div className={`container-${this.state.orientation}`}>
             <FilterField filtrarPorTitulo={(input)=> { this.filtrarPorTitulo(input)}} /> 
             <button className= "boton2" onClick= {() => this.agregarCards()}>Agregar más películas</button>
+            <button  className= "boton3" onClick ={() => this.changeOrientation()}>Cambiar orientacion</button>
          
         {this.state.movies === [] ? 
 
@@ -70,6 +84,7 @@ console.log(this.state.movies);
                 return <Card 
                         key = {index}
                         imagen = {element.backdrop_path}
+                        orientation = {this.state.orientation}
                         title = {element.title}
                         dialanzamiento = {element.release_date}
                         info = {element.overview}

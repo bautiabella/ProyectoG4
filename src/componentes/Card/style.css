@@ -1,5 +1,5 @@
 
-.card1{
+.card1-row{
     position: relative;
     top: 30px;
     padding: 10px;
@@ -8,11 +8,24 @@
     background: rgb(120, 147, 184);
     border-radius: 5px;
 }
-.card1 img{
+.card1-row img{
     width: 100%;
     margin-bottom: 20px; 
 }
-
+.card1-column{
+    position: relative;
+    top: 30px;
+    margin-left: 300px;
+    padding: 10px;
+    margin-bottom: 40px;
+    width: 60%;
+    background: rgb(120, 147, 184);
+    border-radius: 5px;
+}
+.card1-column img{
+    width: 50%;
+    margin-bottom: 20px; 
+}
 .card1:hover{
     box-shadow: 0 .15rem 1.75rem 0 rgba(66, 63, 223, 0.856);
 }
