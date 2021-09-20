@@ -46,7 +46,8 @@ agregarCards(){
 borrarMovie(id){
     let peliculasFiltradas = this.state.movies.filter(movies => movies.id !== id);
     this.setState({
-        movies: peliculasFiltradas
+        movies: peliculasFiltradas,
+        moviesIniciales: peliculasFiltradas
     });
 }
 
