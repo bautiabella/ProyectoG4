@@ -8,7 +8,7 @@
 .boton3{
     display: flex;
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 30px;
     margin-top: 30px;
     border: none;
@@ -32,7 +32,7 @@
 .boton2{
     display: flex;
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 30px;
     margin-top: 30px;
     border: none;
@@ -43,4 +43,34 @@
     text-transform: uppercase;
     font-size: 15px;
     text-align: center;
+}
+.header{
+    width: 100%;
+    padding: 20px;
+    background-color: blue;
+    font-size: 25px;
+    font-style: inherit;
+    color: white;
+}
+.footer{
+    width: 100%;
+    padding: 20px;
+    background-color: blue;
+    font-size: large;
+    font-style: inherit;
+    color: white;
+    text-align: justify;
+}
+ul{
+    display: flex;
+   padding-right: 0px;
+   padding-left: 0px;
+   padding-bottom: 0px;
+   padding-top: 0px;
+   margin: 0px;
+  justify-content: space-around;
+}
+li{
+   list-style-type: none;
+   display: flex;
 }

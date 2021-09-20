@@ -71,7 +71,10 @@ if (this.state.orientation === "row"){
     render (){
 console.log(this.state.movies);
     return (
+
+        
         <div className={`container-${this.state.orientation}`}>
+            <header className= "header">PROYECTO EN REACT DEL GRUPO 4</header>
             <FilterField filtrarPorTitulo={(input)=> { this.filtrarPorTitulo(input)}} /> 
             <button className= "boton2" onClick= {() => this.agregarCards()}>Agregar más películas</button>
             <button  className= "boton3" onClick ={() => this.changeOrientation()}>Cambiar orientacion</button>
@@ -95,8 +98,13 @@ console.log(this.state.movies);
                     ></Card>
                 })
             }
-
-		
+            <footer className= "footer">
+                <ul>
+                    <li>Bautista Abella</li>
+                    <li>Alan Chami</li>
+                    <li>Nicolás Mizrahi</li>
+                </ul>
+            </footer>
     </div>
     )
 }

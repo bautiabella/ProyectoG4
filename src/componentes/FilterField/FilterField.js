@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import "../FilterField/style.css"
+
 class FilterField extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +17,7 @@ class FilterField extends Component {
     }
     render() { 
         return (  <form onSubmit={(evento) => this.prevenirDefault(evento)}>
-        <input
+        <input size="150"
           className="input"
           type="text"
           onChange={(evento) => {
