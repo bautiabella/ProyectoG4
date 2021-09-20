@@ -26,7 +26,10 @@
     width: 50%;
     margin-bottom: 20px; 
 }
-.card1:hover{
+.card1-column:hover{
+    box-shadow: 0 .15rem 1.75rem 0 rgba(66, 63, 223, 0.856);
+}
+.card1-row:hover{
     box-shadow: 0 .15rem 1.75rem 0 rgba(66, 63, 223, 0.856);
 }
 
