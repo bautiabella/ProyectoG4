@@ -17,7 +17,7 @@ class FilterField extends Component {
     }
     render() { 
         return (  <form onSubmit={(evento) => this.prevenirDefault(evento)}>
-        <input size="150"
+        <input
           className="input"
           type="text"
           onChange={(evento) => {
